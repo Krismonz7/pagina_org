@@ -77,6 +77,11 @@ function App() {
   ];
   
 
+  //Actualizar color de equipo
+  const actualizarColor = (color,titulo)=>{
+    console.log('actualizar: ',color,titulo);
+  };
+
 
 
   //Eliminar colaborador
@@ -93,7 +98,7 @@ function App() {
       equipos={equipos.map((equipos)=>equipos.titulo)}
       registrarColaborador={registrarColaborador}
       />
-      }
+      } 
 
       <MiOrg cambiarMostrar={cambiarMostrar}/>
 
@@ -108,6 +113,7 @@ function App() {
             }
             )}
             eliminarColaborador={eliminarColaborador}
+            actualizarColor={actualizarColor}
             key={equipo.titulo}/>
           ) 
         })

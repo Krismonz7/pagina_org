@@ -6,6 +6,11 @@
     font-size: 32px;
 }
 
+.input-color{
+    margin: auto;
+    display: flex;
+    justify-content: right;
+}
 .equipo h3{
     font-weight: 400;
     color: #212121;
