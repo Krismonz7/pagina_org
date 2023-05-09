@@ -13,32 +13,12 @@ function App() {
     foto:'https://e7.pngegg.com/pngimages/989/693/png-clipart-kirby-battle-royale-kirby-star-allies-kirby-s-dream-land-kirby-s-adventure-kirby-game-nintendo.png',
     equipo:'Programacion'
   }];
-
-
+  
+  
   const [mostrarFormulario, actualizarMostrar] = useState(true)
   const [colaboradores,actualizarColaboradores] = useState(([...colaboradoresIniciales]));
-
-
-  //Ternario --> condicion ? seMuestra : noSeMuestra
-  // condicion && seMuestra
-  const cambiarMostrar = () => {
-    actualizarMostrar(!mostrarFormulario);
-  }
-
-
-
-  //Registrar colaborador
-
-  console.log(colaboradores);
-  const registrarColaborador = (colaborador) =>{
-    console.log('Nuevo colaborador',colaborador);
-    //Spread operator
-    actualizarColaboradores([...colaboradores,colaborador]);
-  }
-
-
   //Lista de equipos
-  const equipos = [
+  const [equipos,actualizarEquipos] = useState([
     {
       titulo:'Programacion',
       colorPrimario:'#57C278',
@@ -74,13 +54,28 @@ function App() {
       colorPrimario:'#FF8A29',
       colorSecundario:'#FFEEDF'
     }
-  ];
-  
+  ])
 
-  //Actualizar color de equipo
-  const actualizarColor = (color,titulo)=>{
-    console.log('actualizar: ',color,titulo);
-  };
+
+  //Ternario --> condicion ? seMuestra : noSeMuestra
+  // condicion && seMuestra
+  const cambiarMostrar = () => {
+    actualizarMostrar(!mostrarFormulario);
+  }
+
+
+
+  //Registrar colaborador
+
+  console.log(colaboradores);
+  const registrarColaborador = (colaborador) =>{
+    console.log('Nuevo colaborador',colaborador);
+    //Spread operator
+    actualizarColaboradores([...colaboradores,colaborador]);
+  }
+
+
+
 
 
 
@@ -113,7 +108,6 @@ function App() {
             }
             )}
             eliminarColaborador={eliminarColaborador}
-            actualizarColor={actualizarColor}
             key={equipo.titulo}/>
           ) 
         })

@@ -1,24 +1,27 @@
 import './Equipo.css';
 import {Colaborador} from '../Colaborador/Colaborador';
+import { useState } from 'react';
 
-const Equipo = ({equipoCompleto,listaColaboradores,actualizarColor}) => {
+const Equipo = ({equipoCompleto,listaColaboradores}) => {
 
+  
   const {titulo,colorPrimario,colorSecundario} = equipoCompleto;
+  const [colorTarget,setColorTarget] = useState({backgound:colorPrimario});
+
+
 
   return ( 
-
     <section className='equipo' style={{background: colorSecundario}}>
 
 
 <div className="input-color">
       <input 
       type='color'
-      value={colorPrimario}
+      value={colorTarget}
       onChange={(evento)=>{
 
         const color = evento.target.value;
-
-        actualizarColor(color,titulo);
+        setColorTarget(color);
 
       }}
       />
@@ -35,7 +38,7 @@ const Equipo = ({equipoCompleto,listaColaboradores,actualizarColor}) => {
               <Colaborador 
               colaborador={colaborador} 
               key={index} 
-              colorPrimario={colorPrimario}
+              colorPrimario={colorTarget}
               />
 
             ))
