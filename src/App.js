@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './App.css';
+import { v4 as uuid } from 'uuid';
 import Header from "./componentes/Header/Header"
 import Formulario from './componentes/Formulario/Formulario';
 import MiOrg from './componentes/MiOrg/MiOrg';
@@ -8,6 +9,7 @@ import { Footer } from './componentes/Footer/Footer';
 
 function App() {
   const colaboradoresIniciales=[{
+    id:uuid(),
     nombre:'kirby',
     puesto:'jefe',
     foto:'https://e7.pngegg.com/pngimages/989/693/png-clipart-kirby-battle-royale-kirby-star-allies-kirby-s-dream-land-kirby-s-adventure-kirby-game-nintendo.png',
@@ -15,12 +17,14 @@ function App() {
   }
   ,
   {
+    id:uuid(),
     nombre:'Link',
     puesto:'Desarrollador',
     foto:'https://cdnx.jumpseller.com/retriever-inc/image/6526015/resize/1200/1200?1675961091',
     equipo:'Data Science'
   }
   ,{
+    id:uuid(),
     nombre:'meta knight',
     puesto:'Soporte',
     foto:'https://www.smashbros.com/assets_v2/img/fighter/meta_knight/main.png',
@@ -35,36 +39,43 @@ function App() {
   //Lista de equipos
   const [equipos,actualizarEquipos] = useState([
     {
+      id:uuid(),
       titulo:'Programacion',
       colorPrimario:'#57C278',
       colorSecundario:'#D9F7E9'
     },
     {
+      id:uuid(),
       titulo:'Front End',
       colorPrimario:'#82CFFA',
       colorSecundario:'#E8F8FF'
     },
     {
+      id:uuid(),
       titulo:'Data Science',
       colorPrimario:'#A6D157',
       colorSecundario:'#F0F8E2'
     },
     {
+      id:uuid(),
       titulo:'DevOps',
       colorPrimario:'#E06B69',
       colorSecundario:'#FDE7E8'
     },
     {
+      id:uuid(),
       titulo:'Ux y diseño',
       colorPrimario:'#DB6EBF',
       colorSecundario:'#FAE9F5'
     },
     {
+      id:uuid(),
       titulo:'Movil',
       colorPrimario:'#FFBA05',
       colorSecundario:'#FFF5D9'
     },
     {
+      id:uuid(),
       titulo:'Innovacion y Gestion',
       colorPrimario:'#FF8A29',
       colorSecundario:'#FFEEDF'
@@ -79,6 +90,7 @@ function App() {
   }
 
 
+  console.log('funcion: ',uuid())
 
   //Registrar colaborador
 

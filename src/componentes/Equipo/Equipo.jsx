@@ -11,9 +11,6 @@ const Equipo = ({equipoCompleto,listaColaboradores}) => {
   const [colorTarget,setColorTarget] = useState(colorPrimario);
   const [colorFondo,setColorFondo]= useState(colorSecundario);
 
-  console.log(colorFondo);
-
-
   return ( 
     <section className='equipo' style={{background: hexToRgba(colorFondo,0.75)}}>
 
