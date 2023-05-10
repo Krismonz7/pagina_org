@@ -1,17 +1,21 @@
 import './Equipo.css';
 import {Colaborador} from '../Colaborador/Colaborador';
 import { useState } from 'react';
+import hexToRgba from 'hex-to-rgba';
+
 
 const Equipo = ({equipoCompleto,listaColaboradores}) => {
 
   
   const {titulo,colorPrimario,colorSecundario} = equipoCompleto;
-  const [colorTarget,setColorTarget] = useState({backgound:colorPrimario});
+  const [colorTarget,setColorTarget] = useState(colorPrimario);
+  const [colorFondo,setColorFondo]= useState(colorSecundario);
 
+  console.log(colorFondo);
 
 
   return ( 
-    <section className='equipo' style={{background: colorSecundario}}>
+    <section className='equipo' style={{background: hexToRgba(colorFondo,0.75)}}>
 
 
 <div className="input-color">
@@ -22,6 +26,7 @@ const Equipo = ({equipoCompleto,listaColaboradores}) => {
 
         const color = evento.target.value;
         setColorTarget(color);
+        setColorFondo(color);
 
       }}
       />

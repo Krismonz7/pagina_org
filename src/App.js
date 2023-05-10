@@ -12,7 +12,22 @@ function App() {
     puesto:'jefe',
     foto:'https://e7.pngegg.com/pngimages/989/693/png-clipart-kirby-battle-royale-kirby-star-allies-kirby-s-dream-land-kirby-s-adventure-kirby-game-nintendo.png',
     equipo:'Programacion'
-  }];
+  }
+  ,
+  {
+    nombre:'Link',
+    puesto:'Desarrollador',
+    foto:'https://cdnx.jumpseller.com/retriever-inc/image/6526015/resize/1200/1200?1675961091',
+    equipo:'Data Science'
+  }
+  ,{
+    nombre:'meta knight',
+    puesto:'Soporte',
+    foto:'https://www.smashbros.com/assets_v2/img/fighter/meta_knight/main.png',
+    equipo:'Ux y diseño'
+
+  }
+];
   
   
   const [mostrarFormulario, actualizarMostrar] = useState(true)
