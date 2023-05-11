@@ -89,12 +89,7 @@ function App() {
     actualizarMostrar(!mostrarFormulario);
   }
 
-
-  console.log('funcion: ',uuid())
-
   //Registrar colaborador
-
-  console.log(colaboradores);
   const registrarColaborador = (colaborador) =>{
     console.log('Nuevo colaborador',colaborador);
     //Spread operator
@@ -108,8 +103,12 @@ function App() {
 
   //Eliminar colaborador
 
-  const eliminarColaborador=(colaborador)=>{
-    console.log('Eliminar colaorador'+colaborador);
+  const eliminarColaborador=(idcolaborador,nombre)=>{
+    console.log('Eliminar id: '+idcolaborador+' colaborador: '+nombre);
+    const nuevosColaboradores= colaboradores.filter((colaborador)=>{
+      return colaborador.id !== idcolaborador
+    });
+    actualizarColaboradores(nuevosColaboradores);
   }
   return (
     <div>
