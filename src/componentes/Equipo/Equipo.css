@@ -4,13 +4,15 @@
     box-sizing: border-box;
     text-align: center;
     font-size: 32px;
+    position: relative;
 }
 
 .input-color{
-    margin: auto;
-    display: flex;
-    justify-content: right;
+    position: absolute;
+    top: 20px;
+    right: 50px;
 }
+
 .equipo h3{
     font-weight: 400;
     color: #212121;
@@ -24,3 +26,4 @@
     justify-content: space-evenly;
     flex-wrap: wrap;
 }
+
